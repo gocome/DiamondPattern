@@ -1,5 +1,9 @@
+import time
+
 # user-defined integer
-input_num = 5000
+input_num = 2000000
+
+start_time = time.time()
 
 # pre-compute all the cubes to prevent repetitiveness later
 all_cubes = []
@@ -34,4 +38,6 @@ print('-'*20)
 for tricube in all_tricubes:
     print(*tricube, sep=',')
 
-
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"Execution time: {elapsed_time:.4f} seconds")
